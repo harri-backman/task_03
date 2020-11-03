@@ -1,0 +1,15 @@
+.headerLineContainer {
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 20px;
+    background-color: rgb(236, 240, 198);
+    color: black;
+    text-align: center;
+    /*justify-content: center;*/ /* align horizontal */
+    align-items: center;  /* align vertical */
+}
+
+.isSignedin {
+    grid-column: 7/7;
+    grid-row: 1/1;
+}

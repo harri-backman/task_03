@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { Routing } from "./routes/routing"
+import { NavigationBar } from "./components/navigationbar/navigationBar"
+import { UserProvider } from "./shared/global/provider/UserProvider"
+import { HeaderLine } from "./components/headerline/headerLine"
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <UserProvider>
+      <Routing>
+        <NavigationBar />
+        <HeaderLine />
+      </Routing>
+    </UserProvider>
+  )
 }
 
-export default App;
+export default App
